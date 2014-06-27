@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.activity-indicator-1.0.0.min.js"></script>
+<script src="js/jquery.loading.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+	var Loading = $(this).loading();
+
+	$('#start').click(function(){
+
+		//ローディング表示
+		Loading.start();
+		
+		//サンプルでは３秒後にローディング終了させている
+		setTimeout(function(){
+			//ローディング終了
+			Loading.end();
+		}, 3000);
+
+	});
+
+});
+
+</script>
+</head>
+
+<body bgcolor="#008000">
+
+<span>ajax等のローディング中にクルクル表示し画面全体を操作不可能にする</span>
+
+<div>
+<input type="button" size="10" id="start" value="ロードスタート">
+</div>
+
+<div>
+<a href="#">ダミーリンク１</a>
+<a href="#">ダミーリンク２</a>
+<a href="#">ダミーリンク３</a>
+</div>
+
+
+<div>
+<select name="selectbox">
+<option value="">--</option>
+<option value="1">その１</option>
+<option value="2">その２</option>
+<option value="3">その３</option>
+</select>
+</div>
+
+<div>
+<input type="text" name="text" size="15" value="">
+</div>
+
+<div>
+<input type="submit" size="10" value="決定">
+</div>
+
+
+</body>
+</html>
